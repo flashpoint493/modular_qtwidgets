@@ -1,0 +1,36 @@
+widget_system:
+
+  config:
+    default_group_enabled: true
+    default_widget_enabled: true
+
+  strategies:
+      - name: "QWidgetStrategy"
+        description: "return QWidget instance"
+        enabled: true
+        path: "E:/Project/packages/modular_qtwidgets/example/simple_tools/configs/strategies.py"
+        class: QtWidgetStrategy
+
+  groups:
+    scripts_components:
+      enabled: true
+      description: "Setup and configuration tools"
+      widgets:
+        scripts_launcher:
+          enabled: true
+          path: "E:/Project/packages/modular_qtwidgets/example/simple_tools/widgets/components/scripts_launcher.py"
+          class: ScriptsLauncher
+          priority: 1
+          description: "ScriptsLauncher"
+          strategy: "QtWidgetStrategy"
+          params:
+            default_script_path: "A"
+        scripts_launcher2:
+          enabled: true
+          path: "E:/Project/packages/modular_qtwidgets/example/simple_tools/widgets/components/scripts_launcher.py"
+          class: ScriptsLauncher
+          priority: 0
+          description: "ScriptsLauncher2"
+          strategy: "QtWidgetStrategy"
+          params:
+            default_script_path: "B"

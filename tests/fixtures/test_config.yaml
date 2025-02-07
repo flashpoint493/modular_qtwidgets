@@ -1,0 +1,26 @@
+widget_system:
+  config:
+    default_group_enabled: true
+    default_widget_enabled: true
+
+  strategies:
+    - name: "TestWidgetStrategy"
+      description: "Test strategy"
+      enabled: true
+      path: "tests/fixtures/test_strategy.py"
+      class: TestWidgetStrategy
+
+  groups:
+    test_group:
+      enabled: true
+      description: "Test group"
+      widgets:
+        test_widget:
+          enabled: true
+          path: "tests/fixtures/test_widget.py"
+          class: TestWidget
+          priority: 0
+          description: "Test widget"
+          strategy: "TestWidgetStrategy"
+          params:
+            test_param: "test_value"
