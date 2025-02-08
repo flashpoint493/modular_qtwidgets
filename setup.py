@@ -3,6 +3,8 @@ from setuptools import setup, find_packages
 setup(
     name="modular-qtwidgets",
     version="0.1.0",
+    author="Ocarina",
+    author_email="Ocarina1024@gmail.com",
     description="A configuration-driven modular Qt widget creation framework",
     long_description=open("README.md", encoding="utf-8").read(),
     long_description_content_type="text/markdown",
